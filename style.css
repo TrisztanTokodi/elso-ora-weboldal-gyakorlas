@@ -1,0 +1,199 @@
+body {
+  margin: 0;                          /* a böngésző alapértelmezett margóját nullázzuk */
+  background-color: rgb(165, 227, 201); /* HÁTTÉRSZÍN */
+  color: rgb(99, 97, 97); /* SZÖVEGSZÍN */
+  font-family: "Segoe UI", Arial, sans-serif; /* BETŰTÍPUS-LISTA */
+  font-size: 17px;
+  line-height: 1.7;                /* sortávolság: a betűméret 1,7-szerese */
+}
+
+.fejlec {
+  background-color: rgb(149, 170, 183); /* FŐSZÍN */;
+  color: #ffffff;                  /* fehér szöveg a sötét háttéren */
+  padding: 40px 20px 32px;         /* belső térköz: fent / oldalt / lent */
+  text-align: center;             /* középre igazít mindent, ami benne van */
+}
+
+.profilkep {
+  width: 150px;
+  height: 150px;
+  border: 5px solid #ffffff;       /* vastagság stílus szín */
+  border-radius: 50%;             /* 50% = tökéletes kör */
+  margin-bottom: 14px;
+}
+
+.fejlec h1 {                        /* leszármazott szelektor:
+                                          csak a fejlécben lévő h1 */
+  margin: 0 0 6px;
+  font-size: 30px; /* 30px és 36px között */;
+}
+
+.motto {
+  margin: 0;
+  color: rgb(125, 124, 124); /* halvány szín, ami illik a fejléchez */;
+  font-style: italic;
+}
+
+.menu {
+  background-color: rgb(50, 48, 48); /* SÖTÉT VÁLTOZAT */;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+/* Leszármazott szelektor: csak a menün belüli linkekre vonatkozik,
+   a szövegben lévő linkeket nem bántja. */
+.menu a {
+  display: inline-block;          /* így kaphat rendes padding-ot */
+  color: #ffffff;
+  text-decoration: none;         /* leveszi az aláhúzást */
+  padding: 6px 14px;
+  margin: 2px;
+  border-radius: 4px; /* 0 vagy 6px – döntsd el */;
+  font-size: 15px;
+}
+
+/* :hover = amikor az egér az elem fölött van */
+.menu a:hover {
+  background-color: rgb(190, 199, 215); /* világosabb szín, mint a menüsáv */;
+  color: rgb(43, 43, 43); /* sötét szöveg a világos háttéren */;
+}
+
+.tartalom {
+  width: 90%;              /* keskeny képernyőn a szélesség 90%-a */
+  max-width: 850px;   /* de sosem szélesebb ennél */
+  margin: 30px auto;       /* fent-lent 30px, jobbra-balra auto = KÖZÉPRE */
+}
+
+.doboz {
+  background-color: rgb(14, 17, 24); /* DOBOZ HÁTTERE */;
+  border: 1px solid #e2ddd3;      /* vékony, halvány keret körben */
+  border-left: 6px solid rgb(149, 170, 183); /* 6px solid FŐSZÍN */;  /* vastag színes csík balra */
+  border-radius: 10px;
+  padding: 24px 28px;            /* BELSŐ térköz: keret és szöveg között */
+  margin-bottom: 26px;          /* KÜLSŐ térköz: a következő dobozig */
+}
+
+h2 {
+  margin: 0 0 12px;             /* fent 0, mert a doboz paddingja már megvan */
+  color: rgb(92, 109, 119); /* FŐSZÍN sötétebb változata */;
+  font-size: 25px;
+}
+
+strong {
+  color: rgb(92, 109, 119); /* ugyanaz, mint a h2 színe */;
+}
+
+.halvany {
+  color: rgb(187, 187, 187)/* szürkés, halvány szín */;
+  font-size: 15px;
+}
+
+.lista {
+  margin: 10px 0;
+  padding-left: 24px;         /* hely a pontoknak / számoknak */
+}
+
+.lista li {
+  margin-bottom: 7px;         /* levegő a sorok között */
+}
+
+/* Az összes szövegbeli hivatkozás – a menü kivételével,
+   mert azt a .menu a szabály erősebben felülírja. */
+a {
+  color: rgb(149, 170, 183); /* FŐSZÍN */;
+}
+
+a:hover {
+  color: rgb(190, 199, 215); /* KIEMELŐ SZÍN */;
+}
+
+.kozepre {
+  text-align: center;
+}
+
+.kartyak {
+  text-align: center;           /* a kártyákat középre húzza */
+  margin-bottom: 26px;
+}
+
+.kartya {
+  display: inline-block;      /* egymás mellé, de méretezhetők */
+  width: 240px;               /* 230–260px */;
+  vertical-align: top;        /* a tetejüknél igazodjanak egymáshoz */
+  text-align: left;           /* a kártyán BELÜL viszont balra */
+  background-color: rgb(14, 17, 24); /* DOBOZ HÁTTERE */;
+  border: 1px solid #e2ddd3;
+  border-radius: 10px;
+  padding: 14px;
+  margin: 8px 6px;
+}
+
+.kartya img {
+  width: 100%;                 /* a szülő (kártya) teljes szélessége */
+  border-radius: 6px;
+}
+
+.kartya p {
+  font-size: 15px;
+  color: rgb(187, 187, 187); /* halvány szövegszín */;
+}
+
+h3 {
+  margin: 12px 0 6px;
+  color: rgb(149, 170, 183); /* FŐSZÍN */;
+  font-size: 19px;
+}
+
+hr {
+  border: none;                    /* a böngésző alap vonala csúnya, leszedjük */
+  border-top: 1px solid #e2ddd3;  /* és rajzolunk sajátot */
+  margin: 20px 0;
+}
+
+.idezet {
+  border-left: 4px solid rgb(149, 170, 183); /* 4px solid KIEMELŐ SZÍN */;
+  background-color: rgb(146, 144, 144); /* nagyon halvány szín */;
+  padding: 12px 18px;
+  margin: 16px 0 0;
+  font-style: italic;
+}
+
+/* Csak azt írjuk felül, ami más – a többit a .doboz adja. */
+.kiemelt {
+  background-color: rgb(70, 65, 65); /* halvány, meleg szín */;
+  border-left-color: rgb(149, 170, 183); /* KIEMELŐ SZÍN */;
+}
+
+/* Ez valójában egy link – csak gombnak látszik. */
+.gomb {
+  display: inline-block;
+  background-color: rgb(149, 170, 183); /* FŐSZÍN */;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 11px 22px;
+  border-radius: 8px;
+  margin-top: 6px;
+}
+
+.gomb:hover {
+  background-color: rgb(45, 59, 59); /* SÖTÉT VÁLTOZAT */;
+  color: #ffffff;              /* kell, mert az a:hover felülírná! */
+}
+
+.lablec {
+  background-color: rgb(94, 106, 114); /* SÖTÉT VÁLTOZAT */;
+  color: rgb(43, 43, 43); /* halvány világos szín */;
+  text-align: center;
+  padding: 22px 20px;
+  margin-top: 40px;
+  font-size: 15px;
+}
+
+.lablec a {
+  color: #9b6e6e;              /* a sötét sávon a főszínű link olvashatatlan lenne */
+}
+
+.apro {
+  font-size: 13px;
+  color: rgb(43, 43, 43); /* még halványabb szín */;
+}
